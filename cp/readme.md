@@ -1,1 +1,1 @@
-this repo contains my learnings about trees* 😊
+this repo contains my learnings about cp* 😊

@@ -1,6 +1,8 @@
 ![tree traversal](./traversals.png)
 [nice article](https://www.enjoyalgorithms.com/blog/iterative-binary-tree-traversals-using-stack)
 
+## recursive tree dfs
+
 ```py
 class TreeNode:
     def __init__(self, value):
@@ -43,7 +45,8 @@ root.right.right = TreeNode(7)
 # postorder(root)
 ```
 
-iterative preorder traversal
+## iterative preorder traversal
+
 ```py
 
 # preorder traversal
@@ -79,9 +82,18 @@ def preorder(rt):
 			curr = prev.right
 ```
 
+## traversing two trees simultaniously
 
-    
+```py
+def simultaneousInOrderTraversal(node1, node2):
+	if not node1 and not node2:
+		return
 
+	if node1:
+		simultaneousInOrderTraversal(node1.left, node2.left)
+		print(f"({node1.val}, {node2.val})", end=", ")
+		simultaneousInOrderTraversal(node1.right, node2.right)
+```
 
 
 
